@@ -1,11 +1,13 @@
-node-static
-===========
+node-static-lib
+===============
 
 > a simple, *rfc 2616 compliant* file streaming module for [node](http://nodejs.org)
 
 node-static understands and supports *conditional GET* and *HEAD* requests.
 node-static was inspired by some of the other static-file serving modules out there,
 such as node-paperboy and antinode.
+
+node-static-lib is a no-dependancy udpated version of node-static with no binaries and pure library.
 
 Synopsis
 --------
@@ -193,42 +195,3 @@ Choose a custom index file when serving up directories.
 example: `{ indexFile: "index.htm" }`
 
 > Defaults to `index.html`
-
-
-Command Line Interface
-----------------------
-
-`node-static` also provides a CLI.
-
-### Installation #
-
-```sh
-$ npm install -g node-static
-```
-
-### Example Usage #
-
-```sh
-# serve up the current directory
-$ static
-serving "." at http://127.0.0.1:8080
-
-# serve up a different directory
-$ static public
-serving "public" at http://127.0.0.1:8080
-
-# specify additional headers (this one is useful for development)
-$ static -H '{"Cache-Control": "no-cache, must-revalidate"}'
-serving "." at http://127.0.0.1:8080
-
-# set cache control max age
-$ static -c 7200
-serving "." at http://127.0.0.1:8080
-
-# expose the server to your local network
-$ static -a 0.0.0.0
-serving "." at http://0.0.0.0:8080
-
-# show help message, including all options
-$ static -h
-```

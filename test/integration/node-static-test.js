@@ -299,17 +299,6 @@ suite.addBatch({
 })
 .addBatch(headers)
 .addBatch({
-  'addings custom mime types': {
-    topic : function(){
-      static.mime.define({'application/font-woff': ['woff']});
-      this.callback();
-    },
-    'should add woff' : function(error, response, body){
-      assert.equal(static.mime.lookup('woff'), 'application/font-woff');
-    }
-  }
-})
-.addBatch({
   'serving subdirectory index': {
     topic : function(){
       request.get(TEST_SERVER + '/there/', this.callback); // with trailing slash

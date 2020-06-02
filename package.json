@@ -1,7 +1,7 @@
 {
-  "name": "node-static",
+  "name": "node-static-lib",
   "description": "simple, compliant file streaming module for node",
-  "url": "http://github.com/cloudhead/node-static",
+  "url": "http://github.com/nfp-projects/node-static",
   "keywords": [
     "http",
     "static",
@@ -15,35 +15,31 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/cloudhead/node-static"
+    "url": "http://github.com/nfp-projects/node-static"
   },
   "main": "./lib/node-static",
   "scripts": {
     "test": "vows --spec --isolate"
   },
-  "bin": {
-    "static": "bin/cli.js"
-  },
   "license": "MIT",
-  "dependencies": {
-    "optimist": ">=0.3.4",
-    "colors": ">=0.6.0",
-    "mime": "^1.2.9"
-  },
+  "dependencies": { },
   "devDependencies": {
     "request": "latest",
     "vows": "latest"
   },
-  "version": "0.7.11",
+  "version": "1.0.0",
   "engines": {
     "node": ">= 0.4.1"
   },
   "bugs": {
-    "url": "https://github.com/cloudhead/node-static/issues"
+    "url": "https://github.com/nfp-projects/node-static/issues"
   },
-  "homepage": "https://github.com/cloudhead/node-static",
+  "homepage": "https://github.com/nfp-projects/node-static",
   "directories": {
     "example": "examples",
     "test": "test"
-  }
+  },
+  "files": [
+    "lib"
+  ]
 }
